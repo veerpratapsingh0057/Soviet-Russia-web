@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soviet Russia Life Simulator — SRLS</title>
+  <meta name="description" content="Soviet Russia Life Simulator — Live, Work, Fight, and Survive in the Streets of Russia. The most immersive CRMP-inspired roleplay experience."/>
+  <meta name="keywords" content="Soviet Russia Life Simulator, SRLS, CRMP, roleplay, GTA roleplay, Russian city"/>
+  <meta property="og:title" content="Soviet Russia Life Simulator"/>
+  <meta property="og:description" content="Live, Work, Fight, and Survive in the Streets of Russia."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://soviet-russia-ls.vercel.app"/>
+  <meta name="theme-color" content="#8B0000"/>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <style>
+/* ══════════════════════════════════════════════
+   SOVIET RUSSIA LIFE SIMULATOR — MAIN STYLESHEET
+   ══════════════════════════════════════════════ */
+
+:root {
+  --crimson:       #8B0000;
+  --crimson-mid:   #A80000;
+  --crimson-hot:   #CC1111;
+  --crimson-glow:  #FF2222;
+  --gold:          #C8A84B;
+  --gold-bright:   #E8C86A;
+  --gold-dim:      #7A5E1A;
+  --gold-faint:    #3A2C0A;
+  --void:          #070709;
+  --ink:           #0D0D10;
+  --charcoal:      #141418;
+  --slate:         #1C1C22;
+  --steel:         #26262E;
+  --ash:           #888898;
+  --bone:          #EDE8DE;
+  --white:         #F7F4ED;
+  --discord:       #5865F2;
+  --font-display:  'Oswald', sans-serif;
+  --font-body:     'Montserrat', sans-serif;
+  --font-mono:     'Share Tech Mono', monospace;
+  --easing:        cubic-bezier(0.16, 1, 0.3, 1);
+  --transition:    0.35s var(--easing);
+}
+
+/* ── RESET & BASE ──────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  background: var(--void);
+  color: var(--bone);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ── SCROLLBAR ─────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 0; }
+
+/* ── NOISE TEXTURE OVERLAY ─────────────────── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 1000;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+/* ── GLOBAL LAYOUT ─────────────────────────── */
+.container { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+section { position: relative; }
+
+/* ── TYPOGRAPHY UTILITIES ──────────────────── */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block; width: 24px; height: 1px;
+  background: linear-gradient(90deg, var(--crimson-hot), var(--gold));
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.section-title .accent { color: var(--gold); }
+.section-title .stroke {
+  -webkit-text-stroke: 1px rgba(237, 232, 222, 0.25);
+  color: transparent;
+}
+
+.section-lead {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--ash);
+  max-width: 520px;
+  margin-top: 1rem;
+}
+
+/* ── GOLD DIVIDER ──────────────────────────── */
+.gold-rule {
+  display: flex; align-items: center; gap: 12px;
+  margin: 0 auto;
+  color: var(--gold);
+}
+.gold-rule::before, .gold-rule::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim));
+}
+.gold-rule::after { background: linear-gradient(270deg, transparent, var(--gold-dim)); }
+.gold-rule span { font-size: 1rem; filter: drop-shadow(0 0 6px var(--gold)); }
+
+/* ════════════════════════════════════════════
+   NAVIGATION
+   ════════════════════════════════════════════ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  height: 68px;
+  display: flex; align-items: center;
+  background: transparent;
+  transition: background var(--transition), border-color var(--transition);
+  border-bottom: 1px solid transparent;
+}
+#nav.nav--scrolled {
+  background: rgba(7, 7, 9, 0.94);
+  border-bottom-color: rgba(200, 168, 75, 0.18);
+  backdrop-filter: blur(18px) saturate(1.4);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 40px;
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 12px;
+  transition: opacity 0.2s;
+}
+.nav-brand:hover { opacity: 0.85; }
+.nav-star {
+  width: 38px; height: 38px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: linear-gradient(135deg, var(--crimson-mid), var(--crimson));
+  filter: drop-shadow(0 0 10px rgba(204,17,17,0.7));
+  flex-shrink: 0;
+}
+.nav-wordmark {
+  display: flex; flex-direction: column; line-height: 1.15;
+}
+.nav-wordmark-top {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.nav-wordmark-sub {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.nav-menu {
+  display: flex; align-items: center; gap: 2.5rem;
+  list-style: none;
+}
+.nav-menu a {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(237, 232, 222, 0.65);
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-menu a::after {
+  content: '';
+  position: absolute; left: 0; bottom: -4px;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.3s var(--easing);
+}
+.nav-menu a:hover { color: var(--gold); }
+.nav-menu a:hover::after { width: 100%; }
+.nav-discord-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 20px;
+  background: var(--crimson);
+  border: 1px solid rgba(200, 168, 75, 0.35);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white) !important;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  transition: background 0.2s, border-color 0.2s !important;
+}
+.nav-discord-btn::after { display: none !important; }
+.nav-discord-btn:hover {
+  background: var(--gold) !important;
+  color: var(--void) !important;
+  border-color: var(--gold) !important;
+}
+.nav-hamburger {
+  display: none;
+  flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+}
+.nav-hamburger span {
+  width: 22px; height: 2px;
+  background: var(--gold);
+  transition: all 0.3s;
+  display: block;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.nav-drawer {
+  display: none;
+  position: fixed; top: 68px; left: 0; right: 0; z-index: 899;
+  background: rgba(7,7,9,0.97);
+  border-bottom: 1px solid rgba(200,168,75,0.15);
+  padding: 1.5rem 40px 2rem;
+  flex-direction: column; gap: 1rem;
+  backdrop-filter: blur(16px);
+}
+.nav-drawer.open { display: flex; }
+.nav-drawer a {
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(237,232,222,0.65);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: color 0.2s;
+}
+.nav-drawer a:hover { color: var(--gold); }
+
+/* ════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  padding: 68px 0 0;
+}
+
+/* Deep layered background */
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(120,0,0,0.38) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(60,0,0,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 15% 60%, rgba(80,20,0,0.22) 0%, transparent 60%),
+    linear-gradient(175deg, #0D0508 0%, #100208 30%, #08070A 70%, #050507 100%);
+}
+
+/* Hexagonal grid pattern */
+.hero-hex {
+  position: absolute; inset: 0;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(rgba(200,168,75,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,168,75,0.04) 1px, transparent 1px),
+    linear-gradient(rgba(200,168,75,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,168,75,0.02) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+}
+
+/* Vignette */
+.hero-vignette {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 90% 90% at 50% 50%, transparent 30%, rgba(5,5,7,0.7) 100%);
+}
+
+/* City skyline SVG backdrop */
+.hero-skyline {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 55%;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(5,5,7,0.6) 60%, var(--void) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 480' preserveAspectRatio='xMidYMax meet'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23080408'/%3E%3Cstop offset='1' stop-color='%230A0608'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='480' fill='url(%23sky)'/%3E%3C!-- Far background buildings --%3E%3Crect x='0' y='290' width='1600' height='190' fill='%230A080C'/%3E%3Crect x='50' y='210' width='45' height='270' fill='%230E0C10' opacity='.7'/%3E%3Crect x='100' y='240' width='35' height='240' fill='%230C0A0E' opacity='.6'/%3E%3Crect x='145' y='200' width='55' height='280' fill='%2310000A' opacity='.7'/%3E%3Crect x='210' y='260' width='40' height='220' fill='%230E0C10' opacity='.6'/%3E%3Crect x='260' y='180' width='80' height='300' fill='%230C0A0E' opacity='.8'/%3E%3Crect x='355' y='225' width='45' height='255' fill='%2310000A' opacity='.65'/%3E%3Crect x='410' y='190' width='95' height='290' fill='%230E0C10' opacity='.75'/%3E%3Crect x='520' y='240' width='55' height='240' fill='%230C0A0E' opacity='.6'/%3E%3Crect x='585' y='205' width='70' height='275' fill='%2310000A' opacity='.7'/%3E%3Crect x='665' y='170' width='110' height='310' fill='%230E0C10' opacity='.8'/%3E%3Crect x='790' y='225' width='60' height='255' fill='%230C0A0E' opacity='.65'/%3E%3Crect x='860' y='195' width='85' height='285' fill='%230A0810' opacity='.75'/%3E%3Crect x='960' y='215' width='50' height='265' fill='%2310000A' opacity='.6'/%3E%3Crect x='1025' y='180' width='95' height='300' fill='%230E0C10' opacity='.8'/%3E%3Crect x='1135' y='230' width='55' height='250' fill='%230C0A0E' opacity='.65'/%3E%3Crect x='1200' y='200' width='75' height='280' fill='%230A0810' opacity='.7'/%3E%3Crect x='1290' y='210' width='60' height='270' fill='%2310000A' opacity='.75'/%3E%3Crect x='1365' y='185' width='100' height='295' fill='%230E0C10' opacity='.7'/%3E%3Crect x='1480' y='235' width='65' height='245' fill='%230C0A0E' opacity='.6'/%3E%3Crect x='1560' y='195' width='80' height='285' fill='%230A0810' opacity='.75'/%3E%3C!-- Mid buildings with red windows --%3E%3Crect x='30' y='310' width='70' height='170' fill='%23120010'/%3E%3Crect x='35' y='315' width='8' height='6' fill='%23AA0000' opacity='.6'/%3E%3Crect x='50' y='315' width='8' height='6' fill='%23880000' opacity='.5'/%3E%3Crect x='35' y='330' width='8' height='6' fill='%23660000' opacity='.4'/%3E%3Crect x='115' y='295' width='100' height='185' fill='%23100010'/%3E%3Crect x='120' y='300' width='10' height='8' fill='%23BB1100' opacity='.7'/%3E%3Crect x='140' y='300' width='10' height='8' fill='%23990000' opacity='.5'/%3E%3Crect x='160' y='300' width='10' height='8' fill='%23770000' opacity='.4'/%3E%3Crect x='120' y='320' width='10' height='8' fill='%23AA0000' opacity='.6'/%3E%3Crect x='140' y='320' width='10' height='8' fill='%23880000' opacity='.4'/%3E%3Crect x='230' y='270' width='120' height='210' fill='%23120008'/%3E%3Crect x='238' y='278' width='12' height='9' fill='%23CC0000' opacity='.8'/%3E%3Crect x='258' y='278' width='12' height='9' fill='%23AA0000' opacity='.6'/%3E%3Crect x='278' y='278' width='12' height='9' fill='%23880000' opacity='.5'/%3E%3Crect x='300' y='278' width='12' height='9' fill='%23660000' opacity='.4'/%3E%3Crect x='238' y='298' width='12' height='9' fill='%23BB0000' opacity='.7'/%3E%3Crect x='258' y='298' width='12' height='9' fill='%23990000' opacity='.5'/%3E%3Crect x='278' y='298' width='12' height='9' fill='%23770000' opacity='.3'/%3E%3C!-- Spire/tower buildings --%3E%3Crect x='365' y='250' width='90' height='230' fill='%23140010'/%3E%3Crect x='400' y='205' width='22' height='45' fill='%23120010'/%3E%3Crect x='409' y='185' width='4' height='22' fill='%23CC0000' opacity='.9'/%3E%3Crect x='370' y='260' width='14' height='10' fill='%23BB1100' opacity='.8'/%3E%3Crect x='392' y='260' width='14' height='10' fill='%23990000' opacity='.6'/%3E%3Crect x='414' y='260' width='14' height='10' fill='%23770000' opacity='.5'/%3E%3Crect x='436' y='260' width='14' height='10' fill='%23660000' opacity='.4'/%3E%3Crect x='500' y='240' width='130' height='240' fill='%23120010'/%3E%3Crect x='549' y='195' width='32' height='46' fill='%23100010'/%3E%3Crect x='563' y='170' width='5' height='26' fill='%23DD0000' opacity='.95'/%3E%3Crect x='508' y='252' width='14' height='10' fill='%23CC0000' opacity='.9'/%3E%3Crect x='530' y='252' width='14' height='10' fill='%23AA0000' opacity='.7'/%3E%3Crect x='552' y='252' width='14' height='10' fill='%23880000' opacity='.6'/%3E%3Crect x='574' y='252' width='14' height='10' fill='%23660000' opacity='.4'/%3E%3Crect x='596' y='252' width='14' height='10' fill='%23550000' opacity='.3'/%3E%3Crect x='508' y='274' width='14' height='10' fill='%23BB1100' opacity='.8'/%3E%3Crect x='530' y='274' width='14' height='10' fill='%23990000' opacity='.5'/%3E%3Crect x='650' y='215' width='150' height='265' fill='%23140010'/%3E%3Crect x='715' y='165' width='22' height='52' fill='%23120010'/%3E%3Crect x='724' y='142' width='4' height='24' fill='%23EE0000' opacity='1'/%3E%3Crect x='658' y='228' width='16' height='12' fill='%23DD0000' opacity='.9'/%3E%3Crect x='683' y='228' width='16' height='12' fill='%23BB0000' opacity='.7'/%3E%3Crect x='708' y='228' width='16' height='12' fill='%23990000' opacity='.6'/%3E%3Crect x='733' y='228' width='16' height='12' fill='%23770000' opacity='.5'/%3E%3Crect x='758' y='228' width='16' height='12' fill='%23550000' opacity='.3'/%3E%3Crect x='658' y='252' width='16' height='12' fill='%23CC1100' opacity='.8'/%3E%3Crect x='683' y='252' width='16' height='12' fill='%23AA0000' opacity='.6'/%3E%3Crect x='708' y='252' width='16' height='12' fill='%23880000' opacity='.5'/%3E%3Crect x='733' y='252' width='16' height='12' fill='%23660000' opacity='.4'/%3E%3Crect x='820' y='230' width='110' height='250' fill='%23120010'/%3E%3Crect x='868' y='192' width='16' height='40' fill='%23100010'/%3E%3Crect x='875' y='175' width='3' height='18' fill='%23CC0000' opacity='.9'/%3E%3Crect x='828' y='242' width='14' height='10' fill='%23BB0000' opacity='.8'/%3E%3Crect x='850' y='242' width='14' height='10' fill='%23990000' opacity='.6'/%3E%3Crect x='872' y='242' width='14' height='10' fill='%23770000' opacity='.4'/%3E%3Crect x='894' y='242' width='14' height='10' fill='%23550000' opacity='.3'/%3E%3Crect x='950' y='218' width='135' height='262' fill='%23140010'/%3E%3Crect x='1006' y='172' width='24' height='48' fill='%23120010'/%3E%3Crect x='1017' y='150' width='4' height='23' fill='%23EE1100' opacity='1'/%3E%3Crect x='958' y='230' width='16' height='12' fill='%23DD0000' opacity='.9'/%3E%3Crect x='982' y='230' width='16' height='12' fill='%23BB0000' opacity='.7'/%3E%3Crect x='1006' y='230' width='16' height='12' fill='%23990000' opacity='.5'/%3E%3Crect x='1030' y='230' width='16' height='12' fill='%23770000' opacity='.4'/%3E%3Crect x='1054' y='230' width='16' height='12' fill='%23550000' opacity='.3'/%3E%3Crect x='1100' y='240' width='95' height='240' fill='%23120010'/%3E%3Crect x='1140' y='208' width='16' height='34' fill='%23100010'/%3E%3Crect x='1147' y='190' width='3' height='19' fill='%23CC0000' opacity='.9'/%3E%3Crect x='1108' y='252' width='14' height='10' fill='%23BB0000' opacity='.7'/%3E%3Crect x='1130' y='252' width='14' height='10' fill='%23990000' opacity='.5'/%3E%3Crect x='1152' y='252' width='14' height='10' fill='%23770000' opacity='.4'/%3E%3Crect x='1174' y='252' width='14' height='10' fill='%23550000' opacity='.3'/%3E%3Crect x='1215' y='225' width='125' height='255' fill='%23140010'/%3E%3Crect x='1270' y='183' width='16' height='43' fill='%23120010'/%3E%3Crect x='1277' y='162' width='3' height='22' fill='%23DD0000' opacity='.95'/%3E%3Crect x='1223' y='238' width='16' height='12' fill='%23CC0000' opacity='.9'/%3E%3Crect x='1248' y='238' width='16' height='12' fill='%23AA0000' opacity='.7'/%3E%3Crect x='1273' y='238' width='16' height='12' fill='%23880000' opacity='.5'/%3E%3Crect x='1298' y='238' width='16' height='12' fill='%23660000' opacity='.4'/%3E%3Crect x='1323' y='238' width='16' height='12' fill='%23440000' opacity='.3'/%3E%3Crect x='1360' y='235' width='105' height='245' fill='%23120010'/%3E%3Crect x='1405' y='197' width='16' height='40' fill='%23100010'/%3E%3Crect x='1412' y='178' width='3' height='20' fill='%23BB0000' opacity='.85'/%3E%3Crect x='1368' y='248' width='14' height='10' fill='%23AA0000' opacity='.7'/%3E%3Crect x='1390' y='248' width='14' height='10' fill='%23880000' opacity='.5'/%3E%3Crect x='1412' y='248' width='14' height='10' fill='%23660000' opacity='.4'/%3E%3Crect x='1434' y='248' width='14' height='10' fill='%23440000' opacity='.3'/%3E%3Crect x='1485' y='230' width='95' height='250' fill='%23140010'/%3E%3Crect x='1527' y='192' width='14' height='40' fill='%23120010'/%3E%3Crect x='1533' y='173' width='3' height='20' fill='%23CC0000' opacity='.9'/%3E%3Crect x='1493' y='242' width='14' height='10' fill='%23BB0000' opacity='.7'/%3E%3Crect x='1515' y='242' width='14' height='10' fill='%23990000' opacity='.5'/%3E%3Crect x='1537' y='242' width='14' height='10' fill='%23770000' opacity='.4'/%3E%3Crect x='1559' y='242' width='14' height='10' fill='%23550000' opacity='.3'/%3E%3C!-- Foreground ground --%3E%3Crect x='0' y='440' width='1600' height='40' fill='%230A0810'/%3E%3C/svg%3E") bottom center / cover no-repeat;
+}
+
+/* Scan-line effect */
+.hero-scanlines {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent, transparent 2px,
+    rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+}
+
+/* Floating orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.hero-orb--1 {
+  width: 600px; height: 400px;
+  background: radial-gradient(circle, rgba(160,0,0,0.22) 0%, transparent 70%);
+  top: 5%; left: -10%;
+  animation: orb-drift-1 20s ease-in-out infinite;
+}
+.hero-orb--2 {
+  width: 500px; height: 350px;
+  background: radial-gradient(circle, rgba(100,50,0,0.15) 0%, transparent 70%);
+  top: 20%; right: -5%;
+  animation: orb-drift-2 25s ease-in-out infinite;
+}
+.hero-orb--3 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(180,140,20,0.1) 0%, transparent 70%);
+  bottom: 20%; left: 40%;
+  animation: orb-drift-3 18s ease-in-out infinite;
+}
+@keyframes orb-drift-1 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(80px, 40px) scale(1.08); }
+  66% { transform: translate(-40px, 70px) scale(0.95); }
+}
+@keyframes orb-drift-2 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-60px, 50px) scale(1.1); }
+}
+@keyframes orb-drift-3 {
+  0%,100% { transform: translate(0,0); }
+  50% { transform: translate(40px, -30px); }
+}
+
+/* Particles */
+.hero-particles { position: absolute; inset: 0; pointer-events: none; }
+.hero-particles .p {
+  position: absolute;
+  width: 2px; height: 2px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  animation: ptcl linear infinite;
+}
+@keyframes ptcl {
+  0%   { opacity:0; transform: translateY(0) scale(0); }
+  8%   { opacity:0.9; transform: translateY(-15px) scale(1); }
+  85%  { opacity:0.25; }
+  100% { opacity:0; transform: translateY(-350px) scale(0.3); }
+}
+
+/* Hero content */
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 1000px;
+  width: 100%;
+  animation: hero-in 1.4s var(--easing) forwards;
+}
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-status-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(139,0,0,0.22);
+  border: 1px solid rgba(200,168,75,0.32);
+  padding: 7px 22px;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.status-pulse {
+  width: 7px; height: 7px;
+  background: var(--crimson-glow);
+  border-radius: 50%;
+  animation: pulse-dot 1.3s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { opacity:1; transform:scale(1); box-shadow: 0 0 0 0 rgba(255,34,34,0.5); }
+  50% { opacity:0.5; transform:scale(0.6); box-shadow: 0 0 0 4px rgba(255,34,34,0); }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+.hero-title-line1 {
+  display: block;
+  -webkit-text-stroke: 2px rgba(237,232,222,0.18);
+  color: transparent;
+  text-transform: uppercase;
+}
+.hero-title-line2 {
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  position: relative;
+}
+.hero-title-line2::after {
+  content: attr(data-text);
+  position: absolute; left: 0; top: 0;
+  color: var(--gold);
+  filter: blur(24px);
+  opacity: 0.35;
+}
+.hero-title-line3 {
+  display: block;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 0.78em;
+  letter-spacing: 0.05em;
+}
+
+.hero-divider {
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px; margin: 1.8rem auto;
+  max-width: 340px;
+}
+.hero-divider-line {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,168,75,0.5));
+}
+.hero-divider-line:last-child { transform: scaleX(-1); }
+.hero-divider-gem {
+  color: var(--gold);
+  font-size: 0.9rem;
+  filter: drop-shadow(0 0 8px var(--gold));
+  animation: gem-pulse 3s ease-in-out infinite;
+}
+@keyframes gem-pulse { 0%,100%{ filter:drop-shadow(0 0 8px var(--gold)); } 50%{ filter:drop-shadow(0 0 18px var(--gold)); } }
+
+.hero-sub {
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  line-height: 1.8;
+  color: rgba(237,232,222,0.5);
+  max-width: 560px;
+  margin: 0 auto 2.8rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-btns {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 34px;
+  font-family: var(--font-body);
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  position: relative; overflow: hidden;
+  transition: all 0.3s var(--easing);
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}
+.btn-icon { font-size: 0.9rem; }
+.btn::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(255,255,255,0.06);
+  transform: translateX(-110%);
+  transition: transform 0.4s var(--easing);
+}
+.btn:hover::before { transform: translateX(0); }
+
+.btn-primary {
+  background: var(--crimson);
+  color: var(--white);
+  border: 1px solid rgba(200,168,75,0.4);
+}
+.btn-primary:hover {
+  background: var(--crimson-hot);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(204,17,17,0.45);
+  border-color: var(--gold);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(200,168,75,0.4);
+}
+.btn-secondary:hover {
+  background: rgba(200,168,75,0.08);
+  border-color: var(--gold-bright);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(200,168,75,0.15);
+}
+
+/* Hero stats bar */
+.hero-stats {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; flex-wrap: wrap;
+  margin-top: 5rem;
+  border-top: 1px solid rgba(200,168,75,0.1);
+  padding-top: 2rem;
+}
+.hero-stat {
+  text-align: center;
+  padding: 0 2.5rem;
+  position: relative;
+}
+.hero-stat + .hero-stat::before {
+  content: '';
+  position: absolute; left: 0; top: 20%;
+  height: 60%; width: 1px;
+  background: rgba(200,168,75,0.18);
+}
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  filter: drop-shadow(0 0 12px rgba(200,168,75,0.3));
+}
+.hero-stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(137,136,152,0.7);
+  margin-top: 5px;
+}
+
+.scroll-cue {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: rgba(200,168,75,0.4);
+  font-family: var(--font-mono);
+  font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase;
+  animation: scroll-bob 2.5s ease-in-out infinite;
+}
+.scroll-cue-arrow { width: 1px; height: 32px; background: linear-gradient(180deg, rgba(200,168,75,0.4), transparent); }
+@keyframes scroll-bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+/* ════════════════════════════════════════════
+   ROADMAP
+   ════════════════════════════════════════════ */
+#roadmap {
+  padding: 120px 0;
+  background: var(--charcoal);
+  overflow: hidden;
+}
+.roadmap-bg-text {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 18vw; font-weight: 700;
+  color: rgba(139,0,0,0.04);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  white-space: nowrap; pointer-events: none;
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+.roadmap-header { margin-bottom: 5rem; }
+.roadmap-timeline {
+  position: relative;
+  display: flex; flex-direction: column; gap: 2.5rem;
+  padding: 0 0;
+}
+
+/* Vertical spine */
+.roadmap-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%; top: 20px; bottom: 20px;
+  width: 1px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(200,168,75,0.4) 10%,
+    rgba(139,0,0,0.6) 50%,
+    rgba(200,168,75,0.4) 90%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+.rm-item {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+.rm-item:nth-child(even) .rm-card { order: 3; }
+.rm-item:nth-child(even) .rm-empty { order: 1; }
+
+.rm-card {
+  padding: 2rem 2.2rem;
+  background: var(--slate);
+  border: 1px solid rgba(200,168,75,0.1);
+  position: relative;
+  transition: all 0.35s var(--easing);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+.rm-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.rm-card:hover { border-color: rgba(200,168,75,0.28); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.rm-card:hover::before { opacity: 1; }
+
+/* Active card */
+.rm-item.is-active .rm-card {
+  background: linear-gradient(135deg, rgba(120,0,0,0.2) 0%, rgba(26,26,34,0.95) 100%);
+  border-color: rgba(204,17,17,0.5);
+  box-shadow: 0 0 50px rgba(180,0,0,0.18), inset 0 0 30px rgba(100,0,0,0.06);
+}
+.rm-item.is-done .rm-card {
+  border-color: rgba(200,168,75,0.2);
+  background: rgba(24,24,30,0.7);
+}
+
+.rm-phase {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.6rem;
+}
+.rm-card-title {
+  font-family: var(--font-display);
+  font-size: 1.55rem; font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--white);
+}
+.rm-item.is-active .rm-card-title { color: var(--crimson-glow); }
+.rm-item.is-done .rm-card-title { color: var(--gold); }
+
+.rm-desc {
+  font-size: 0.84rem; line-height: 1.75;
+  color: var(--ash);
+}
+
+.rm-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 4px 14px;
+}
+.rm-badge-dot { width: 5px; height: 5px; border-radius: 50%; }
+.badge-done  { background: rgba(0,120,60,0.18); color: #5CD890; border: 1px solid rgba(0,180,80,0.25); }
+.badge-done .rm-badge-dot { background: #5CD890; }
+.badge-active { background: rgba(200,0,0,0.18); color: var(--crimson-glow); border: 1px solid rgba(220,0,0,0.4); }
+.badge-active .rm-badge-dot { background: var(--crimson-glow); animation: pulse-dot 1s infinite; }
+.badge-upcoming { background: rgba(200,168,75,0.08); color: rgba(200,168,75,0.7); border: 1px solid rgba(200,168,75,0.15); }
+.badge-upcoming .rm-badge-dot { background: rgba(200,168,75,0.6); }
+
+/* Center dot */
+.rm-node {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+}
+.rm-node-dot {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-dim);
+  background: var(--charcoal);
+  transition: all 0.3s;
+}
+.rm-item.is-active .rm-node-dot {
+  width: 22px; height: 22px;
+  background: var(--crimson);
+  border-color: var(--crimson-hot);
+  box-shadow: 0 0 20px rgba(220,0,0,0.9), 0 0 0 6px rgba(180,0,0,0.2);
+  animation: node-pulse 2s ease-in-out infinite;
+}
+.rm-item.is-done .rm-node-dot {
+  background: var(--gold-dim);
+  border-color: var(--gold);
+}
+@keyframes node-pulse {
+  0%,100% { box-shadow: 0 0 20px rgba(220,0,0,0.9), 0 0 0 0 rgba(180,0,0,0.4); }
+  50%      { box-shadow: 0 0 30px rgba(255,34,34,1), 0 0 0 12px rgba(180,0,0,0); }
+}
+.rm-empty { /* spacer for alt side */ }
+
+/* ════════════════════════════════════════════
+   COMMUNITY
+   ════════════════════════════════════════════ */
+#community {
+  padding: 120px 0;
+  background: var(--void);
+  overflow: hidden;
+}
+.community-bg-accent {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--crimson) 30%, var(--gold-dim) 50%, var(--crimson) 70%, transparent 100%);
+}
+.community-header { margin-bottom: 4rem; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.4rem;
+  margin-top: 3rem;
+}
+
+.team-card {
+  background: var(--slate);
+  border: 1px solid rgba(200,168,75,0.1);
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s var(--easing);
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+  overflow: hidden;
+  cursor: default;
+}
+.team-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(200,168,75,0.05) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.team-card:hover {
+  border-color: rgba(200,168,75,0.32);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+.team-card:hover::after { opacity: 1; }
+
+.tc-glow {
+  position: absolute; top: -1px; left: 0; right: 0; height: 2px;
+  opacity: 0; transition: opacity 0.4s;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.team-card:hover .tc-glow { opacity: 1; }
+
+.tc-avatar {
+  width: 82px; height: 82px;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 700;
+  position: relative;
+  flex-shrink: 0;
+}
+.tc-avatar::before {
+  content: '';
+  position: absolute; inset: -3px;
+  border-radius: 50%;
+  padding: 2px;
+  background: conic-gradient(var(--gold-dim), var(--crimson), var(--gold-dim));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.av-0 { background: linear-gradient(135deg, #6A0000, #300000); color: var(--gold); }
+.av-1 { background: linear-gradient(135deg, #0F0F3A, #060618); color: #7A8AFF; }
+.av-2 { background: linear-gradient(135deg, #063018, #02100A); color: #3ABA78; }
+.av-3 { background: linear-gradient(135deg, #361400, #180800); color: #E8823A; }
+.av-4 { background: linear-gradient(135deg, #2E002E, #160016); color: #E860E8; }
+.av-5 { background: linear-gradient(135deg, #003636, #001A1A); color: #38D8D8; }
+
+.tc-role-badge {
+  display: inline-block; margin-bottom: 0.9rem;
+  padding: 3px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+}
+.rb-founder { background: rgba(139,0,0,0.28); color: var(--crimson-glow); border: 1px solid rgba(200,0,0,0.3); }
+.rb-dev     { background: rgba(20,20,70,0.35); color: #8899FF; border: 1px solid rgba(80,80,220,0.2); }
+.rb-design  { background: rgba(0,55,28,0.35); color: #40D878; border: 1px solid rgba(0,180,80,0.2); }
+.rb-admin   { background: rgba(200,168,75,0.12); color: var(--gold); border: 1px solid rgba(200,168,75,0.28); }
+
+.tc-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--white); margin-bottom: 0.25rem;
+}
+.tc-role {
+  font-family: var(--font-mono);
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.9rem;
+}
+.tc-bio {
+  font-size: 0.8rem; line-height: 1.7;
+  color: rgba(137,136,152,0.75);
+}
+
+/* ════════════════════════════════════════════
+   GALLERY
+   ════════════════════════════════════════════ */
+#gallery {
+  padding: 120px 0;
+  background: var(--charcoal);
+  overflow: hidden;
+}
+.gallery-header { margin-bottom: 4rem; }
+
+.gallery-mosaic {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 220px 180px;
+  gap: 8px;
+}
+.gm-item {
+  overflow: hidden; position: relative;
+  border: 1px solid rgba(200,168,75,0.08);
+  cursor: pointer;
+  background: var(--steel);
+  transition: border-color 0.3s;
+}
+.gm-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+.gm-item:nth-child(2) { grid-column: span 4; }
+.gm-item:nth-child(3) { grid-column: span 3; }
+.gm-item:nth-child(4) { grid-column: span 3; }
+.gm-item:nth-child(5) { grid-column: span 4; }
+.gm-item:hover { border-color: rgba(200,168,75,0.3); }
+.gm-item:hover .gm-inner { transform: scale(1.07); }
+.gm-item:hover .gm-overlay { opacity: 1; }
+
+.gm-inner {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.6s var(--easing);
+  font-size: 4.5rem; opacity: 0.1;
+}
+.gm-item:nth-child(1) .gm-inner { font-size: 7rem; }
+
+.gp-0 { background: linear-gradient(145deg, #160408, #0A0A14, #0C1008); }
+.gp-1 { background: linear-gradient(145deg, #0A1018, #160408, #0E0800); }
+.gp-2 { background: linear-gradient(145deg, #0C1608, #141400, #080814); }
+.gp-3 { background: linear-gradient(145deg, #140A00, #0A0408, #141414); }
+.gp-4 { background: linear-gradient(145deg, #080814, #140408, #001408); }
+
+.gm-overlay {
+  position: absolute; inset: 0;
+  background: rgba(100,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s;
+}
+.gm-overlay-label {
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+  padding: 8px 18px;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+.gm-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(237,232,222,0.5);
+  background: linear-gradient(0deg, rgba(0,0,0,0.75), transparent);
+}
+
+/* ════════════════════════════════════════════
+   JOIN US
+   ════════════════════════════════════════════ */
+#join {
+  padding: 140px 0;
+  background: var(--void);
+  overflow: hidden;
+  text-align: center;
+}
+.join-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(100,0,0,0.2) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 70% 20%, rgba(60,40,0,0.12) 0%, transparent 60%);
+}
+.join-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(200,168,75,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(200,168,75,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.join-inner {
+  position: relative; z-index: 1;
+  max-width: 760px; margin: 0 auto; padding: 0 40px;
+}
+.join-star-icon {
+  display: block; font-size: 3.5rem;
+  margin-bottom: 1.8rem;
+  filter: drop-shadow(0 0 22px rgba(200,168,75,0.7));
+  animation: gem-pulse 3.5s ease-in-out infinite;
+}
+.join-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700; line-height: 1.08;
+  margin-bottom: 1.2rem;
+}
+.join-title .accent { color: var(--gold); }
+.join-sub {
+  font-size: 1rem; line-height: 1.8;
+  color: var(--ash);
+  max-width: 480px; margin: 0 auto 1.5rem;
+}
+.join-perks {
+  display: flex; justify-content: center; gap: 2rem;
+  flex-wrap: wrap; margin: 1.5rem 0 3rem;
+}
+.join-perk {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(137,136,152,0.75);
+}
+.join-perk::before { content: '◆'; color: var(--gold); font-size: 0.45rem; }
+.join-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ════════════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════════════ */
+footer {
+  background: #040404;
+  border-top: 1px solid rgba(200,168,75,0.1);
+  padding: 4rem 0 2.5rem;
+}
+.footer-inner {
+  max-width: 1240px; margin: 0 auto; padding: 0 40px;
+  display: flex; flex-direction: column; align-items: center; gap: 2rem;
+}
+.footer-brand {
+  text-align: center;
+}
+.footer-logo-mark {
+  font-family: var(--font-display);
+  font-size: 1.8rem; font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  display: block; margin-bottom: 0.3rem;
+}
+.footer-logo-mark span { color: var(--gold); }
+.footer-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(137,136,152,0.5);
+}
+.footer-nav {
+  display: flex; gap: 2.5rem; list-style: none; flex-wrap: wrap; justify-content: center;
+}
+.footer-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(137,136,152,0.5);
+  transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--gold); }
+.footer-divider {
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,168,75,0.18), transparent);
+}
+.footer-bottom {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+}
+.footer-copy, .footer-made {
+  font-family: var(--font-mono);
+  font-size: 0.65rem; letter-spacing: 0.1em;
+  color: rgba(137,136,152,0.3);
+}
+.footer-made .heart { color: var(--crimson-hot); }
+
+/* ════════════════════════════════════════════
+   FLOATING DISCORD BUTTON
+   ════════════════════════════════════════════ */
+.fab-discord {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 890;
+  display: flex; align-items: center; gap: 9px;
+  padding: 12px 20px;
+  background: var(--discord);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 32px rgba(88,101,242,0.45);
+  transition: all 0.3s var(--easing);
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+.fab-discord:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 44px rgba(88,101,242,0.65);
+}
+.fab-discord-icon { font-size: 1.05rem; }
+
+/* ════════════════════════════════════════════
+   FADE-IN ANIMATIONS (Intersection Observer)
+   ════════════════════════════════════════════ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s var(--easing), transform 0.75s var(--easing);
+}
+.fade-up.in-view { opacity: 1; transform: translateY(0); }
+.fade-up.delay-1 { transition-delay: 0.1s; }
+.fade-up.delay-2 { transition-delay: 0.2s; }
+.fade-up.delay-3 { transition-delay: 0.3s; }
+.fade-up.delay-4 { transition-delay: 0.45s; }
+.fade-up.delay-5 { transition-delay: 0.6s; }
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .roadmap-timeline::before { display: none; }
+  .rm-item {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .rm-item:nth-child(even) .rm-card { order: 0; }
+  .rm-item:nth-child(even) .rm-empty { display: none; }
+  .rm-item .rm-empty { display: none; }
+  .rm-item .rm-node { display: none; }
+  .gallery-mosaic {
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 200px 160px;
+  }
+  .gm-item:nth-child(1) { grid-column: span 6; grid-row: span 1; }
+  .gm-item:nth-child(2) { grid-column: span 3; }
+  .gm-item:nth-child(3) { grid-column: span 3; }
+  .gm-item:nth-child(4) { grid-column: span 3; }
+  .gm-item:nth-child(5) { grid-column: span 3; }
+}
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .nav-inner { padding: 0 24px; }
+  .nav-menu { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero-stats { gap: 0; }
+  .hero-stat { padding: 0 1.2rem; }
+  .hero-stat-num { font-size: 1.6rem; }
+  .gallery-mosaic {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 160px);
+  }
+  .gm-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  .gm-item:nth-child(2) { grid-column: span 1; }
+  .gm-item:nth-child(3) { grid-column: span 1; }
+  .gm-item:nth-child(4) { grid-column: span 1; }
+  .gm-item:nth-child(5) { grid-column: span 1; }
+  .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+  .fab-discord-label { display: none; }
+  .fab-discord { padding: 12px; }
+  .join-inner { padding: 0 24px; }
+  .footer-inner { padding: 0 24px; }
+}
+@media (max-width: 480px) {
+  .hero-stat + .hero-stat::before { display: none; }
+  .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+  .join-perks { gap: 1rem; }
+  .gallery-mosaic {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 150px);
+  }
+  .gm-item:nth-child(1) { grid-column: span 1; }
+}
+  </style>
+</head>
+<body>
+
+<!-- ════════════ NAVIGATION ════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">
+      <div class="nav-star" aria-hidden="true"></div>
+      <div class="nav-wordmark">
+        <span class="nav-wordmark-top">Soviet Russia</span>
+        <span class="nav-wordmark-sub">Life Simulator</span>
+      </div>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li>
+        <a href="https://discord.gg/KdvTzFGyxv" target="_blank" rel="noopener"
+           class="nav-discord-btn">⚡ Discord</a>
+      </li>
+    </ul>
+
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="#hero" onclick="closeMenu()">Home</a>
+  <a href="#roadmap" onclick="closeMenu()">Roadmap</a>
+  <a href="#community" onclick="closeMenu()">Community</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#join" onclick="closeMenu()">Join Us</a>
+  <a href="https://discord.gg/KdvTzFGyxv" target="_blank" rel="noopener">Join Discord ↗</a>
+</div>
+
+
+<!-- ════════════ HERO ════════════ -->
+<section id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-hex" aria-hidden="true"></div>
+  <div class="hero-skyline" aria-hidden="true"></div>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="hero-scanlines" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb--3" aria-hidden="true"></div>
+  <div class="hero-particles" id="particles" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-status-pill">
+      <span class="status-pulse"></span>
+      Beta Testing Active
+    </div>
+
+    <h1 class="hero-title">
+      <span class="hero-title-line1">Soviet Russia</span>
+      <span class="hero-title-line2" data-text="Life">Life</span>
+      <span class="hero-title-line3">Simulator</span>
+    </h1>
+
+    <div class="hero-divider">
+      <div class="hero-divider-line"></div>
+      <span class="hero-divider-gem">★</span>
+      <div class="hero-divider-line"></div>
+    </div>
+
+    <p class="hero-sub">
+      Live, Work, Fight, and Survive in the Streets of Russia.<br>
+      The most immersive CRMP-inspired roleplay experience.
+    </p>
+
+    <div class="hero-btns">
+      <a href="https://discord.gg/KdvTzFGyxv" target="_blank" rel="noopener"
+         class="btn btn-primary">
+        <span class="btn-icon">⚡</span> Join Beta
+      </a>
+      <a href="#roadmap" class="btn btn-secondary">
+        <span class="btn-icon">◎</span> Learn More
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num" id="count-members">0</div>
+        <div class="hero-stat-lbl">Members</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-lbl">Dev Phases</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">2026</div>
+        <div class="hero-stat-lbl">Launch Year</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">24/7</div>
+        <div class="hero-stat-lbl">Support</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    Scroll<div class="scroll-cue-arrow"></div>
+  </div>
+</section>
+
+
+<!-- ════════════ ROADMAP ════════════ -->
+<section id="roadmap">
+  <div class="roadmap-bg-text" aria-hidden="true">ROADMAP</div>
+  <div class="container">
+    <div class="roadmap-header fade-up">
+      <span class="eyebrow">Development Journey</span>
+      <h2 class="section-title">Our <span class="accent">Roadmap</span></h2>
+      <p class="section-lead">Every milestone tracked — from the first line of code to a fully live city.</p>
+    </div>
+
+    <div class="roadmap-timeline">
+
+      <!-- Phase 1 — Done -->
+      <div class="rm-item is-done fade-up">
+        <div class="rm-card">
+          <div class="rm-phase">Phase 01</div>
+          <h3 class="rm-card-title">Development</h3>
+          <p class="rm-desc">Core systems built from scratch: movement, minimap, economy engine, job framework, and server architecture laid down solid.</p>
+          <span class="rm-badge badge-done"><span class="rm-badge-dot"></span>Complete</span>
+        </div>
+        <div class="rm-node"><div class="rm-node-dot"></div></div>
+        <div class="rm-empty"></div>
+      </div>
+
+      <!-- Phase 2 — ACTIVE -->
+      <div class="rm-item is-active fade-up delay-1">
+        <div class="rm-empty"></div>
+        <div class="rm-node"><div class="rm-node-dot"></div></div>
+        <div class="rm-card">
+          <div class="rm-phase">Phase 02 · Current</div>
+          <h3 class="rm-card-title">Beta Testing</h3>
+          <p class="rm-desc">Players actively test gameplay mechanics, submit bug reports, and shape the final experience through direct community feedback loops.</p>
+          <span class="rm-badge badge-active"><span class="rm-badge-dot"></span>In Progress</span>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="rm-item fade-up delay-2">
+        <div class="rm-card">
+          <div class="rm-phase">Phase 03</div>
+          <h3 class="rm-card-title">Grand Launch</h3>
+          <p class="rm-desc">Massive expansion update — new jobs, criminal organizations, UI-based system overhaul, political factions, and a fully realized open economy.</p>
+          <span class="rm-badge badge-upcoming"><span class="rm-badge-dot"></span>Upcoming</span>
+        </div>
+        <div class="rm-node"><div class="rm-node-dot"></div></div>
+        <div class="rm-empty"></div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="rm-item fade-up delay-3">
+        <div class="rm-empty"></div>
+        <div class="rm-node"><div class="rm-node-dot"></div></div>
+        <div class="rm-card">
+          <div class="rm-phase">Phase 04</div>
+          <h3 class="rm-card-title">Launched</h3>
+          <p class="rm-desc">Fully live city open to all players worldwide. Ongoing seasonal content, events, gang wars, government elections, and continuous world-building.</p>
+          <span class="rm-badge badge-upcoming"><span class="rm-badge-dot"></span>Upcoming</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════ COMMUNITY ════════════ -->
+<section id="community">
+  <div class="community-bg-accent" aria-hidden="true"></div>
+  <div class="container">
+    <div class="community-header fade-up">
+      <span class="eyebrow">The People Behind SRLS</span>
+      <h2 class="section-title">Our Team &amp; <span class="accent">Community</span></h2>
+      <p class="section-lead">Meet the people building Soviet Russia Life Simulator. Dedicated, passionate, and relentless.</p>
+    </div>
+
+    <div class="team-grid" id="teamGrid">
+      <!-- Cards rendered by JS from TEAM_DATA below -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════ GALLERY ════════════ -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header fade-up">
+      <span class="eyebrow">Visual Preview</span>
+      <h2 class="section-title">Game <span class="accent">Gallery</span></h2>
+      <p class="section-lead">Concept art and in-development screenshots from inside the city.</p>
+    </div>
+
+    <div class="gallery-mosaic fade-up delay-1">
+      <div class="gm-item gp-0">
+        <div class="gm-inner">🌆</div>
+        <div class="gm-overlay"><span class="gm-overlay-label">View Scene</span></div>
+        <div class="gm-caption">City Overview · Downtown District</div>
+      </div>
+      <div class="gm-item gp-1">
+        <div class="gm-inner">🚔</div>
+        <div class="gm-overlay"><span class="gm-overlay-label">View Scene</span></div>
+        <div class="gm-caption">Police Pursuit</div>
+      </div>
+      <div class="gm-item gp-2">
+        <div class="gm-inner">🏭</div>
+        <div class="gm-overlay"><span class="gm-overlay-label">View Scene</span></div>
+        <div class="gm-caption">Industrial Zone</div>
+      </div>
+      <div class="gm-item gp-3">
+        <div class="gm-inner">🔫</div>
+        <div class="gm-overlay"><span class="gm-overlay-label">View Scene</span></div>
+        <div class="gm-caption">Mafia Territory</div>
+      </div>
+      <div class="gm-item gp-4">
+        <div class="gm-inner">🗺️</div>
+        <div class="gm-overlay"><span class="gm-overlay-label">View Scene</span></div>
+        <div class="gm-caption">Minimap UI Preview</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════ JOIN US ════════════ -->
+<section id="join">
+  <div class="join-bg" aria-hidden="true"></div>
+  <div class="join-grid" aria-hidden="true"></div>
+  <div class="join-inner fade-up">
+    <span class="join-star-icon" aria-hidden="true">★</span>
+    <h2 class="join-title">
+      Want to be part of<br>
+      <span class="accent">Soviet Russia LS?</span>
+    </h2>
+    <p class="join-sub">
+      Join our growing community and help shape the future of roleplay gaming.
+      Whether you're a player, a tester, or want to join the team — there's a place for you.
+    </p>
+    <div class="join-perks">
+      <span class="join-perk">Active Community</span>
+      <span class="join-perk">Beta Access</span>
+      <span class="join-perk">Staff Openings</span>
+      <span class="join-perk">Regular Updates</span>
+    </div>
+    <div class="join-btns">
+      <a href="https://discord.gg/KdvTzFGyxv" target="_blank" rel="noopener"
+         class="btn btn-primary">
+        <span class="btn-icon">💬</span> Join Discord
+      </a>
+      <a href="https://forms.google.com" target="_blank" rel="noopener"
+         class="btn btn-secondary">
+        <span class="btn-icon">📋</span> Apply for Team
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo-mark">Soviet Russia <span>LS</span></span>
+      <span class="footer-tagline">Life · Work · Fight · Survive</span>
+    </div>
+
+    <ul class="footer-nav">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="https://discord.gg/KdvTzFGyxv" target="_blank" rel="noopener">Discord</a></li>
+    </ul>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Soviet Russia Life Simulator. All rights reserved.</span>
+      <span class="footer-made">Made with <span class="heart">♥</span> by SRLS Team</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════ FLOATING DISCORD ════════════ -->
+<a href="https://discord.gg/KdvTzFGyxv" target="_blank" rel="noopener"
+   class="fab-discord" aria-label="Join Discord">
+  <span class="fab-discord-icon">💬</span>
+  <span class="fab-discord-label">Join Discord</span>
+</a>
+
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+     ════════════════════════════════════════ -->
+<script>
+/* ─────────────────────────────────────────────
+   TEAM DATA
+   Edit this array to add / update team members.
+   badge options: "founder" | "dev" | "design" | "admin"
+   av options:    "av-0" through "av-5"
+   ───────────────────────────────────────────── */
+const TEAM_DATA = [
+  {
+    name: "Veer Pratap",
+    role: "Governor & Project Founder",
+    badge: "founder", badgeLabel: "Founder",
+    bio: "Visionary behind SRLS. Leads the project with a deep passion for authentic Russian roleplay experiences.",
+    initials: "VP", av: "av-0"
+  },
+  {
+    name: "Dimitri",
+    role: "Lead Developer",
+    badge: "dev", badgeLabel: "Developer",
+    bio: "Architects the core systems — from movement physics to server-side economy and database logic.",
+    initials: "DM", av: "av-1"
+  },
+  {
+    name: "Nikita",
+    role: "Map Designer",
+    badge: "design", badgeLabel: "Designer",
+    bio: "Crafts the streets, districts, and landmarks that make every corner of the city feel alive.",
+    initials: "NK", av: "av-2"
+  },
+  {
+    name: "Sasha",
+    role: "Community Admin",
+    badge: "admin", badgeLabel: "Admin",
+    bio: "Manages the Discord, handles player relations, mediates conflicts, and coordinates server events.",
+    initials: "SA", av: "av-3"
+  },
+  {
+    name: "Pavel",
+    role: "Backend Developer",
+    badge: "dev", badgeLabel: "Developer",
+    bio: "Handles server infrastructure, API integrations, and ensures everything runs smoothly at scale.",
+    initials: "PV", av: "av-4"
+  },
+  {
+    name: "Anya",
+    role: "UI / UX Designer",
+    badge: "design", badgeLabel: "Designer",
+    bio: "Designs intuitive HUD systems and interfaces that enhance immersion without breaking roleplay.",
+    initials: "AY", av: "av-5"
+  }
+];
+
+/* ─────────────────────────────────────────────
+   RENDER TEAM CARDS
+   ───────────────────────────────────────────── */
+function renderTeam() {
+  const grid = document.getElementById('teamGrid');
+  grid.innerHTML = TEAM_DATA.map((m, i) => `
+    <div class="team-card fade-up delay-${Math.min(i + 1, 5)}">
+      <div class="tc-glow"></div>
+      <div class="tc-avatar ${m.av}">${m.initials}</div>
+      <span class="tc-role-badge rb-${m.badge}">${m.badgeLabel}</span>
+      <div class="tc-name">${m.name}</div>
+      <div class="tc-role">${m.role}</div>
+      <p class="tc-bio">${m.bio}</p>
+    </div>
+  `).join('');
+  setupObserver(); // re-observe newly added elements
+}
+
+/* ─────────────────────────────────────────────
+   PARTICLES
+   ───────────────────────────────────────────── */
+function spawnParticles() {
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 32; i++) {
+    const p = document.createElement('div');
+    p.className = 'p';
+    const size = 1 + Math.random() * 2;
+    p.style.cssText = `
+      left: ${Math.random() * 100}%;
+      bottom: ${Math.random() * 30}%;
+      width: ${size}px;
+      height: ${size}px;
+      animation-duration: ${9 + Math.random() * 14}s;
+      animation-delay: ${Math.random() * 14}s;
+      opacity: 0;
+    `;
+    container.appendChild(p);
+  }
+}
+
+/* ─────────────────────────────────────────────
+   NAV SCROLL BEHAVIOR
+   ───────────────────────────────────────────── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+}, { passive: true });
+
+/* ─────────────────────────────────────────────
+   MOBILE MENU
+   ───────────────────────────────────────────── */
+function toggleMenu() {
+  const hb = document.getElementById('hamburger');
+  const dr = document.getElementById('navDrawer');
+  hb.classList.toggle('open');
+  dr.classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('navDrawer').classList.remove('open');
+}
+
+/* ─────────────────────────────────────────────
+   INTERSECTION OBSERVER (fade-up animations)
+   ───────────────────────────────────────────── */
+function setupObserver() {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        io.unobserve(e.target); // fire once
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up:not(.in-view)').forEach(el => io.observe(el));
+}
+
+/* ─────────────────────────────────────────────
+   ANIMATED COUNTER
+   ───────────────────────────────────────────── */
+function animateCounter(el, target, duration = 1800) {
+  const start = performance.now();
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    el.textContent = Math.floor(ease * target) + (t < 1 ? '' : '+');
+    if (t < 1) requestAnimationFrame(tick);
+    else el.textContent = target + '+';
+  }
+  requestAnimationFrame(tick);
+}
+
+// Trigger counter when hero is in view
+const counterEl = document.getElementById('count-members');
+const heroObs = new IntersectionObserver(([e]) => {
+  if (e.isIntersecting) { animateCounter(counterEl, 500); heroObs.disconnect(); }
+}, { threshold: 0.5 });
+heroObs.observe(document.getElementById('hero'));
+
+/* ─────────────────────────────────────────────
+   INIT
+   ───────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  renderTeam();
+  spawnParticles();
+  setupObserver();
+});
+</script>
+</body>
+</html>
